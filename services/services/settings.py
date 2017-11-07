@@ -105,7 +105,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TODO: Remember to change this to Japan
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
