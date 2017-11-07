@@ -10,8 +10,7 @@ class Model():
     __SQL_GET_LOCATION_INFO = "SELECT location_id, location_name, last_price, last_updated_time, NOW()," \
                               "timediff(NOW(), last_updated_time) as hold_duration, current_owner_id " \
                               "FROM locations WHERE location_id = %s;"
-    __SQL_GET_ALL_LOCATIONS_INFO = "SELECT location_id, location_name, last_price, last_updated_time, NOW()," \
-                                   "timediff(NOW(), last_updated_time) as hold_duration, current_owner_id" \
+    __SQL_GET_ALL_LOCATIONS_INFO = "SELECT location_id, location_name, last_price, current_owner_id" \
                                    " FROM locations;"
     __SQL_GET_ALL_TEAMS_BALANCE = "SELECT team_id, current_balance FROM teams;"
     __SQL_UPDATE_BALANCE_FOR_TEAM = "UPDATE teams SET current_balance = %s WHERE team_id = %s;"
