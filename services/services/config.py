@@ -1,4 +1,5 @@
 from datetime import datetime
+import pymysql
 
 # DB config
 DB_CONFIG = {
