@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'getteamslast3checkpoints', controller.get_teams_last_3_checkpoints),
     url(r'getteambalance', controller.get_team_balance),
     url(r'getteamlocations', controller.get_team_locations),
+    url(r'getteamtransactionrecords', controller.get_team_transaction_records),
 
     #for admin action
     url(r'buylocation', controller.buy_location),
@@ -16,4 +17,5 @@ urlpatterns = [
     #for admin query
     url(r'getlocationsstatus', controller.get_locations_status),
     url(r'getteamsbalance', controller.get_all_teams_balance),
+    url(r'getendscore', controller.get_game_end_scores),
 ]

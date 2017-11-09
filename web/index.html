@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://127.0.0.1:8000/buylocation -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="NONE,NOARCHIVE">
+    <title>Nagoya activity admin console</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-tweaks.css">
+    <link rel="stylesheet" type="text/css" href="./css/prettify.css">
+    <link rel="stylesheet" type="text/css" href="./css/default.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-dialog.min.css">
+</head>
+
+<body class="">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body…</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <div class="wrapper">
+        <div class="navbar navbar-static-top navbar-inverse" role="navigation" aria-label="navbar">
+            <div class="container">
+                <span>
+              
+                <a class="navbar-brand" rel="nofollow" href="#">
+                    Admin console
+                </a>
+              
+            </span>
+                <ul class="nav navbar-nav pull-right">
+                </ul>
+            </div>
+        </div>
+        <!-- navbar -->
+        <div class="container">
+            <ul class="breadcrumb">
+                <li class="active"><a>Buy Location</a></li>
+                <br>
+                <br>
+                <table class="table">
+                    <tr>
+                        <td>
+                            <a>Location id</a>
+                            <div class="dropdown" id="location-id-dropdown">
+                                <select class="selectpicker">
+                                    <option value=1>#1 - Nagoya Castle</option>
+                                    <option value=2>#2 - Nagoya TV Tower</option>
+                                    <option value=3>#3 - Oasis 21</option>
+                                    <option value=4>#4 - Tokugawa Park</option>
+                                    <option value=5>#5 - Shiroyamahachimangu</option>
+                                    <option value=6>#6 - Tamotsu Chiyo Inari Shrine</option>
+                                    <option value=7>#7 - Kosho ji</option>
+                                    <option value=8>#8 - Osu Kannon</option>
+                                    <option value=9>#9 - Tsuruma Park</option>
+                                    <option value=10>#10 - Atsuta Jingu</option>
+                                    <option value=11>#11 - Shirotori Garden</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <a>Team id</a>
+                            <div class="dropdown" id="team-id-dropdown">
+                                <select class="selectpicker">
+                                    <option value=1>#1 - Tom</option>
+                                    <option value=2>#2 - Karl</option>
+                                    <option value=3>#3 - Bill</option>
+                                    <option value=4>#4 - Tom</option>
+                                    <option value=5>#5 - Karl</option>
+                                    <option value=6>#6 - Bill</option>
+                                    <option value=7>#7 - Tom</option>
+                                    <option value=8>#8 - Karl</option>
+                                    <option value=9>#9 - Bill</option>
+                                    <option value=10>#10 - Tom</option>
+                                    <option value=11>#11 - Karl</option>
+                                    <option value=12>#12 - Bill</option>
+                                    <option value=13>#13 - Tom</option>
+                                    <option value=14>#14 - Karl</option>
+                                    <option value=15>#15 - Bill</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <a>Time slot</a>
+                            <div class="dropdown" id="time-slot-id-dropdown">
+                                <select class="selectpicker">
+                                    <!-- <option value=-1>Now</option> -->
+                                    <option value=0>0900 - 0930</option>
+                                    <option value=1>0930 - 1000</option>
+                                    <option value=2>1000 - 1030</option>
+                                    <option value=3>1030 - 1100</option>
+                                    <option value=4>1100 - 1130</option>
+                                    <option value=5>1130 - 1200</option>
+                                    <option value=6>1200 - 1230</option>
+                                    <option value=7>1230 - 1300</option>
+                                    <option value=8>1300 - 1330</option>
+                                    <option value=9>1330 - 1400</option>
+                                    <option value=10>1400 - 1430</option>
+                                    <option value=11>1430 - 1500</option>
+                                    <option value=12>1500 - 1530</option>
+                                    <option value=13>1530 - 1600</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" id="btn-buy-location">Buy</button>
+                        </td>
+                    </tr>
+                </table>
+            </ul>
+        </div>
+        <div class="container">
+            <table class="table" id="team-status-table"></table>
+            <table class="table" id="locations-status-table"></table>
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- ./wrapper -->
+    <script>
+    window.drf = {
+        csrfHeaderName: "X-CSRFTOKEN",
+        csrfCookieName: "csrftoken"
+    };
+    </script>
+    <script src="./scripts/jquery-1.12.4.min.js"></script>
+    <script src="./scripts/ajax-form.js"></script>
+    <script src="./scripts/csrf.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/prettify-min.js"></script>
+    <script src="./scripts/default.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/bootstrap-dialog.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        app.initialize();
+    });
+    </script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-#FOR initialize db
+# FOR initialize db
 
 
 SQL_INIT_LOCATIONS = "INSERT INTO `nagoya`.`locations` (`location_id`, `location_name`, `current_owner_id`, `current_toll_price`, `current_price`) VALUES ('1', 'Nagoya Castle', '0', '100', '1000');" \
@@ -25,3 +25,8 @@ SQL_INIT_TEAMS = "INSERT INTO `nagoya`.`teams` (`team_id`, `team_leader`, `curre
                  "INSERT INTO `nagoya`.`teams` (`team_leader`, `current_balance`) VALUES ('DaodaoChen', '3000');" \
                  "INSERT INTO `nagoya`.`teams` (`team_leader`, `current_balance`) VALUES ('CousinLi', '3000');" \
                  "INSERT INTO `nagoya`.`teams` (`team_leader`, `current_balance`) VALUES ('DapeiChen', '3000');"
+
+sql_reset = "UPDATE locations SET last_price=120 WHERE location_id=2;" \
+            " UPDATE locations SET last_price=120 WHERE location_id=3;" \
+            " UPDATE locations SET last_price=120 WHERE location_id=8;" \
+            " UPDATE locations SET last_price=120 WHERE location_id=9;"
