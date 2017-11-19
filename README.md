@@ -1,9 +1,3 @@
-# nagoya
-nagoya-test
+# nagoya MONOPOLY game backend by @Tom
 
-@Bill:
-
-Change config in:
-/services/config.py - DB info
-/web/scripts/app.js - Service host
-/web/scripts/app_teams.js - Service host
+a game designed for offsite team building
