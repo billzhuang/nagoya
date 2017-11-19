@@ -25,7 +25,7 @@ class Model():
                                       "WHERE transaction_from_id = %s AND transaction_type = 'PURCHASE'" \
                                       " ORDER BY transaction_time DESC LIMIT 3;"
     __SQL_GET_TEAM_TRANSACTION_RECORDS = "SELECT T.transaction_type, T.transaction_amount, T.transaction_from_id," \
-                                         " T.transaction_location_id, L.location_name, t.transaction_time " \
+                                         " T.transaction_location_id, L.location_name, T.transaction_time " \
                                          "FROM transactions T JOIN locations L " \
                                          "ON T.transaction_location_id = L.location_id " \
                                          "WHERE transaction_to_id = %s OR transaction_from_id = %s" \

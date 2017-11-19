@@ -1,5 +1,5 @@
 app = {
-    SERVICE_URL: "http://127.0.0.1:8000/",
+    SERVICE_URL: "http://nagoya.eflabs.life/api/",
     GET_TEAM_LOCATIONS: {
         "method": "POST",
         "url": "getteamlocations"
@@ -165,10 +165,10 @@ app = {
             th.appendTo(tr);
             var td_amount = $("<td>" + data[index]["transaction_amount"] + "</td>");
             var td_location = $("<td>" + data[index]["location_name"] + "</td>");
-            var td_time = $("<td>" + data[index]["transaction_time"] + "</td>");
+            //var td_time = $("<td>" + data[index]["transaction_time"] + "</td>");
             td_amount.appendTo(tr);
             td_location.appendTo(tr);
-            td_time.appendTo(tr);
+            //td_time.appendTo(tr);
             $("#transactions-table-body").append(tr);
 
         }

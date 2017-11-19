@@ -140,7 +140,7 @@ def get_teams_last_3_checkpoints(request):
         mod = Model()
         all_teams = mod.get_all_teams_balance()
         response_reduced = []
-        for i in range(len(all_teams) - 1):
+        for i in range(len(all_teams)):
             team_last_3_checkpoints = mod.get_team_last_3_purchases(all_teams[i]['team_id'])
             response_reduced.append({
                 "team_id": all_teams[i]['team_id'],

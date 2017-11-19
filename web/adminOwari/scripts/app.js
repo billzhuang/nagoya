@@ -1,5 +1,5 @@
 var app = {
-    SERVICE_URL: "http://127.0.0.1:8000/",
+    SERVICE_URL: "http://nagoya.eflabs.life/api/",
     BUY_LOCATION: {
         "method": "POST",
         "url": "buylocation"
